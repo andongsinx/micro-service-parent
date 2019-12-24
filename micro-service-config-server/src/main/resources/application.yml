@@ -1,0 +1,14 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/andongsinx/SpringCloudConfigDir
+          search-paths: config-repo
+          username: 799024967@qq.com
+          password: wad,.123456
