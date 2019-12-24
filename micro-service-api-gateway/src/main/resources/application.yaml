@@ -1,13 +1,18 @@
 spring:
   application:
-    name: micro-provider
+    name: api-gateway
   cloud:
     zookeeper:
       connect-string: 0.0.0.0:2181
       discovery:
         register: true
         enabled: true
-        instance-id: 2
+        instance-id: 4
         root: /app-zk-server
 server:
-  port: 6061
+  port: 8061
+zuul:
+  routes:
+    mprovider:
+      path: /**
+      serviceId: micro-provider

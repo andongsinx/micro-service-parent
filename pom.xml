@@ -12,6 +12,7 @@
         <module>micro-service-consumer</module>
         <module>micro-service-config-server</module>
         <module>micro-service-config-client</module>
+        <module>micro-service-api-gateway</module>
     </modules>
     <name>micro-service-parent</name>
     <description>micro-service-parent</description>
@@ -24,7 +25,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Greenwich.SR3</version>
+                <version>Greenwich.SR4</version>
                 <!-- eureka版本 -->
                 <type>pom</type>
                 <scope>import</scope>
@@ -32,7 +33,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.2.2.RELEASE</version>
+                <version>2.1.4.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
