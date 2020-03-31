@@ -13,6 +13,7 @@
         <module>micro-service-config-server</module>
         <module>micro-service-config-client</module>
         <module>micro-service-api-gateway</module>
+        <module>micro-service-spring</module>
     </modules>
     <name>micro-service-parent</name>
     <description>micro-service-parent</description>

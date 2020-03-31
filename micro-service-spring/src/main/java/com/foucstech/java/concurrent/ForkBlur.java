@@ -1,4 +1,4 @@
-package com.foucstech.java;
+package com.foucstech.java.concurrent;
 
 import java.util.concurrent.RecursiveAction;
 
