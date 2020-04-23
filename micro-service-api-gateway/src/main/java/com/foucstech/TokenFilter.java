@@ -16,6 +16,7 @@ public class TokenFilter extends ZuulFilter {
         return true;
     }
 
+
     @Override
     public Object run() throws ZuulException {
         System.out.println("2222222222222");
