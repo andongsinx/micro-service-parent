@@ -9,5 +9,25 @@ spring:
         enabled: true
         instance-id: 2
         root: /app-zk-server
+  kafka:
+    #====kafka=====#
+    bootstrap-servers: 127.0.0.1:9092
+    #====producer==#
+    producer:
+      retries: 0
+      #每次发送的消息大小
+      batch-size: 16384
+      buffer-memory: 33554432
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    #====consumer==#
+    consumer:
+      group-id: test-consumer-group
+      auto-commit-interval: 100
+      auto-offset-reset: earliest
+      enable-auto-commit: true
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+
 server:
   port: 6062
