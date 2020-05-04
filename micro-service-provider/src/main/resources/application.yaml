@@ -3,11 +3,11 @@ spring:
     name: micro-provider
   cloud:
     zookeeper:
-      connect-string: 0.0.0.0:2181
+      connect-string: localhost:2181
       discovery:
         register: true
         enabled: true
         instance-id: 2
         root: /app-zk-server
 server:
-  port: 6061
+  port: 6062

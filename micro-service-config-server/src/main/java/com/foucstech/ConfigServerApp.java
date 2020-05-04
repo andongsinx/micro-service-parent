@@ -10,7 +10,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
  */
 @SpringBootApplication
 @EnableConfigServer
-@EnableAutoConfiguration
 public class ConfigServerApp {
     public static void main(String[] args) {
         SpringApplication.run(ConfigServerApp.class, args);
