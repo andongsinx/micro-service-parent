@@ -1,3 +1,5 @@
+server:
+  port: 6062
 spring:
   application:
     name: micro-provider
@@ -9,8 +11,9 @@ spring:
         enabled: true
         instance-id: 2
         root: /app-zk-server
+###kafa config###
   kafka:
-    #====kafka=====#
+    #====kafka server=====#
     bootstrap-servers: 127.0.0.1:9092
     #====producer==#
     producer:
@@ -28,6 +31,11 @@ spring:
       enable-auto-commit: true
       key-serializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.apache.kafka.common.serialization.StringDeserializer
-
-server:
-  port: 6062
+#==mybatis config=====#
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ttnet?characterEncoding=UTF-8&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+mybatis:
+  type-aliases-package: com.foucstech.mybatis.entity

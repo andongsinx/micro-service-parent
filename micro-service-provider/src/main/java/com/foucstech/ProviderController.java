@@ -4,6 +4,7 @@ import com.foucstech.kafka.data.Message;
 import com.foucstech.kafka.producer.KafkaProducer;
 import com.foucstech.listen.UserApplicationEventPublisher;
 import com.foucstech.listen.UserInfoEvent;
+import com.foucstech.mybatis.mapper.MicCrovRegionMappingMapper;
 import com.foucstech.pojo.UserInfo;
 import com.sun.xml.internal.ws.api.model.MEP;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,9 @@ public class ProviderController {
     @Autowired
     private UserApplicationEventPublisher publisher;
 
+    @Autowired
+    private MicCrovRegionMappingMapper mappingMapper;
+
     @RequestMapping("/provider")
     public String provider() {
         System.out.println("provider request....");
@@ -32,6 +36,7 @@ public class ProviderController {
 
     @RequestMapping("/provider-kafka")
     public String kafkaSender() {
+        mappingMapper.queryAll();
         Message message = new Message();
         message.setMsg("success");
         message.setTimestamp(System.currentTimeMillis());

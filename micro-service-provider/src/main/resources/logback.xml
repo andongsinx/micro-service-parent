@@ -46,6 +46,7 @@
 
     <!--文件日志， 按照每天生成日志文件 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>a.log</file>
         <!-- 正在记录的日志文件的路径及文件名 -->
         <!--<file>${defaultLogDir:-/qy/qy-doctorservice/logs}/log/docser-main.log</file>-->
         <!--TimeBasedRollingPolicy 基于时间来定义轮转策略 -->
